@@ -1,0 +1,35 @@
+{
+  "name": "cucumber2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:open": "cypress open",
+    "test:tag": "cypress run --env TAGS='@smoke'",
+    "test:tag:headed": "cypress run --headed --env TAGS='@tc01'",
+    "test:smoke": "cypress run --env TAGS='@smoke or @critical'",
+    "test:smoke:headed": "cypress run --headed --env TAGS='@smoke or @critical'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^28.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^16.1.0",
+    "esbuild": "^0.28.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.{js,ts}",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

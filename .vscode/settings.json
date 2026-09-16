@@ -1,0 +1,11 @@
+{
+  "cucumber.features": [
+    "cypress/e2e/features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "cypress/e2e/step_definitions/**/*.js"
+  ],
+  "cucumberautocomplete.steps": [
+    "cypress/e2e/step_definitions/**/*.js"
+  ]
+}
